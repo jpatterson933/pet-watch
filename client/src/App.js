@@ -1,8 +1,14 @@
 import './App.css';
+import { LandingPage } from "./views/LandingPage";
 
 function App() {
   return (
-    <h1>Pet Watch</h1>
+    <div>
+
+      <h1>Pet Watch</h1>
+      <LandingPage></LandingPage>
+
+    </div>
   );
 }
 
