@@ -8,18 +8,16 @@ export function Form() {
         <div>
             <Label
                 for="test"
-                text="test"
+                text="Pet Name"
             />
-            
             <Input
                 type="text"
                 id="test"
-                placeholder="testing"
+                placeholder="Enter your pet's name"
             ></Input>
             <Button
-                label="Test Button"
+                label="Start Tracking your Pet"
             >
-            
             </Button>
         </div>
     )

@@ -3,7 +3,7 @@ import React from 'react';
 export function Label(props) {
     return (
         <label 
-            for={props.for}
+            htmlFor={props.for}
         >
 
             {/* text visible on form */}

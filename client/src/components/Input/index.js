@@ -4,7 +4,7 @@ export function Input (props) {
     return (
         <input 
             type={props.type} 
-            class="form-control" 
+            className="form-control" 
             id={props.id} 
             placeholder={props.placeholder}
         />
