@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router();
-// const db = require('../../models');
-// const userRoutes = require('./users');
+const db = require('../../models');
+const petRoutes = require('./pet');
 
-
-// router.use("/users", userRoutes)
-// router.use("/events", eventRoutes)
-// router.use("/login", loginRoutes)
+router.use("/pets", petRoutes);
 
 module.exports = router;
