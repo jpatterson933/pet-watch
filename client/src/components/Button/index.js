@@ -5,6 +5,7 @@ export function Button(props) {
         <button 
             type="button" 
             className="btn btn-outline-dark"
+            id={props.id}
         >
             {props.label}
         </button>
