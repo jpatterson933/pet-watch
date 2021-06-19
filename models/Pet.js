@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 
 
 const PetSchema = new Schema({
-    petname: {
+    petName: {
         type: String,
         minLength: 6,
     },
