@@ -26,6 +26,11 @@ app.use(require('express-session')({
     })
 }));
 
+// // Catch errors
+// Store.on('error', function(error) {
+//   console.log(error);
+// });
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
