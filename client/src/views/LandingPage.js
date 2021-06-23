@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import API from "../utils/API";
@@ -28,6 +28,10 @@ export function SignUp() {
         setPet(newPet)
     };
 
+    useEffect(() => {
+        document.title = `${pet.petName}`
+    })
+
     return (
         <div>
             <form className="signup" >
@@ -42,12 +46,6 @@ export function SignUp() {
                     name="password"
                     type="password"
                     placeholder="Enter Password"
-                    onChange={(event) => handleInputChange(event)}
-                />
-                <Input
-                    name="confirmPassword"
-                    type="password"
-                    placeholder="Re-Enter Password"
                     onChange={(event) => handleInputChange(event)}
                 />
                 <Button
