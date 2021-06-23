@@ -7,20 +7,19 @@ export function SignUp() {
     const [pet, setPet] = useState({
         petName: "",
         password: "",
-        confirmPassword: "",
     })
 
     function handleFormSubmit(event) {
         event.preventDefault()
-        const { password, confirmPassword } = this.state;
-        if (password !== confirmPassword) {
-            alert("passwods don't match")
-        } else {
-            API.saveUser({
-                petName: pet.petName,
-                password: pet.password
-            })
-        }
+        // const { password, confirmPassword } = this.state;
+        // if (password !== confirmPassword) {
+        //     alert("passwords don't match")
+        // }
+        API.savePet({
+            petName: pet.petName,
+            password: pet.password
+        })
+        console.log("petsaved")
     };
 
     function handleInputChange(event) {
@@ -34,7 +33,7 @@ export function SignUp() {
             <form className="signup" >
                 <h3 className="signup">Sign Up</h3>
                 <Input
-                    name="petname"
+                    name="petName"
                     type="text"
                     placeholder="Pet Name"
                     onChange={(event) => handleInputChange(event)}
@@ -55,6 +54,7 @@ export function SignUp() {
                     name="signup"
                     type="submit"
                     label="Sign Up"
+                    value="Submit"
                     className="buttonsignup btn-primary btn-block my-5 text-center rounded"
                     onClick={handleFormSubmit}
                 />
@@ -62,3 +62,4 @@ export function SignUp() {
         </div>
     );
 }
+
